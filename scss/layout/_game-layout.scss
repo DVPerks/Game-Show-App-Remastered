@@ -1,0 +1,20 @@
+@use '../abstracts/mixins' as m;
+
+.game-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-content: start;
+  width: min(100% - 2rem, 68rem);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin-inline: auto;
+  padding-block: clamp(1.25rem, 4vw, 3rem);
+}
+.game-shell > * { min-width: 0; }
+.game-banner { display: grid; justify-items: center; gap: .65rem; text-align: center; }
+.game-banner .eyebrow { color: var(--muted-text); }
+.game-banner__title { color: var(--brand); }
+.hint-panel { background: var(--surface); border: 1px solid var(--border); border-radius: .75rem; padding: clamp(1rem, 3vw, 1.5rem); text-align: center; }
+.hint-panel p { margin-top: .6rem; line-height: 1.55; color: var(--muted-text); }
+@include m.respond-tablet { .game-shell { gap: 1.75rem; } }

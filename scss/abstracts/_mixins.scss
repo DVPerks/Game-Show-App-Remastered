@@ -1,0 +1,9 @@
+@use 'variables' as vars;
+
+@mixin respond-tablet {
+  @media (min-width: vars.$tablet) { @content; }
+}
+
+@mixin respond-mobile {
+  @media (max-width: vars.$mobile) { @content; }
+}

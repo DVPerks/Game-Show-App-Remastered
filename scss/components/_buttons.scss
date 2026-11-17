@@ -1,0 +1,18 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: 2.75rem;
+  padding: .65rem 1.2rem;
+  border: 2px solid transparent;
+  border-radius: .625rem;
+  font-weight: 750;
+  line-height: 1.25;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.button:hover { transform: translateY(-1px); }
+.button:active { transform: translateY(0); }
+.button--primary { background: var(--action-bg); color: var(--action-text); border-color: var(--action-bg); width: 100%; }
+.button--secondary { background: var(--key-bg); color: var(--key-text); border-color: var(--key-border); }
+.button:focus-visible { outline: 3px solid var(--focus); box-shadow: 0 0 0 2px var(--page-bg); }

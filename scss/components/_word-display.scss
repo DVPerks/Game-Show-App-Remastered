@@ -1,0 +1,27 @@
+.word-panel { width: 100%; }
+.word-panel__letters { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: clamp(.2rem, 1vw, .65rem); }
+.letter {
+  display: grid;
+  place-items: center;
+  flex: 0 1 4.25rem;
+  min-width: 0;
+  height: clamp(2.75rem, 9vw, 4.5rem);
+  border: 2px solid var(--tile-outline);
+  border-radius: .5rem;
+  background: var(--tile-bg);
+  color: transparent;
+  font-size: clamp(1.1rem, 4vw, 1.65rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: background-color .25s, color .25s;
+}
+.letter.show {
+  color: var(--tile-revealed-text);
+  background: var(--tile-revealed);
+  animation: reveal-letter .38s ease-out both;
+}
+@keyframes reveal-letter {
+  0% { transform: translateY(4px) scale(.91); }
+  65% { transform: translateY(-4px) scale(1.055); }
+  100% { transform: translateY(-2px) scale(1); }
+}

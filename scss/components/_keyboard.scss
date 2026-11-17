@@ -1,0 +1,37 @@
+.keyboard { display: grid; justify-items: center; gap: .55rem; width: 100%; }
+.keyrow { display: flex; justify-content: center; width: 100%; gap: clamp(.18rem, .7vw, .5rem); }
+.keyrow button {
+  display: grid;
+  place-items: center;
+  flex: 0 1 3.5rem;
+  min-width: 0;
+  min-height: 2.65rem;
+  border: 2px solid var(--key-border);
+  border-radius: .5rem;
+  background: var(--key-bg);
+  color: var(--key-text);
+  text-transform: uppercase;
+  font-size: clamp(.8rem, 2.9vw, 1.3rem);
+  font-weight: 750;
+  transition: background-color .2s, color .2s, transform .2s;
+}
+.keyrow button:not(:disabled):not([aria-disabled='true']):hover { transform: translateY(-2px); }
+.keyrow button:disabled { opacity: .85; }
+.keyrow button[aria-disabled='true'] { cursor: not-allowed; }
+.keyrow button.chosen { background: var(--key-chosen); color: var(--key-chosen-text); opacity: 1; }
+// An icon supplements color so correct/incorrect guesses are distinguishable.
+.keyrow button.chosen { position: relative; padding-right: .4rem; }
+.keyrow button[data-result]::after {
+  position: absolute;
+  top: 0;
+  right: .1rem;
+  font-size: .7rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.keyrow button[data-result='correct']::after { content: '✓'; }
+.keyrow button[data-result='incorrect']::after { content: '×'; }
+// A minmax track prevents the ten-key row from overflowing 320px screens.
+.keyboard { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+.keyrow { min-width: 0; }
+.keyrow button { padding: 0; }

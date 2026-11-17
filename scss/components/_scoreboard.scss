@@ -1,0 +1,4 @@
+.scoreboard { display: grid; justify-items: center; gap: .75rem; }
+.scoreboard__lives { display: flex; align-items: center; justify-content: center; gap: clamp(.35rem, 2vw, 1rem); }
+.tries { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; }
+.tries img { max-width: 100%; max-height: 2.25rem; object-fit: contain; }

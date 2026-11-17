@@ -1,0 +1,9 @@
+// Result states use the existing accessible theme's action/button colors.
+.overlay.win { background: var(--win-bg); }
+.overlay.lose { background: var(--lose-bg); }
+#result-screen { text-align: center; }
+#result-screen .overlay__intro { overflow-wrap: anywhere; }
+#result-screen strong { font-weight: 850; letter-spacing: .04em; }
+.result-streaks { margin-block: 1.25rem; display: grid; gap: .35rem; }
+
+.result-streaks__label { font-weight: 750; text-transform: capitalize; }

@@ -1,0 +1,7 @@
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.skip-link { position: fixed; top: .5rem; left: .5rem; z-index: 20; background: #ffffff; color: #192a40; border: 2px solid #192a40; border-radius: .375rem; padding: .65rem 1rem; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+// Keep the offscreen skip link out of sequential focus while setup is open.
+body:has(#overlay:not([hidden])) .skip-link { display: none; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }

@@ -1,0 +1,89 @@
+// Semantic tokens keep theme contrast consistent across components.
+// Each text/surface pair is verified in docs/contrast-report.md.
+:root,
+:root[data-theme='classic'] {
+  color-scheme: light;
+  --page-bg: #f3f6fa;
+  --surface: #ffffff;
+  --text: #192a40;
+  --muted-text: #42536b;
+  --border: #63758d;
+  --brand: #24496f;
+  --brand-text: #ffffff;
+  --key-bg: #e3eaf2;
+  --key-text: #192a40;
+  --key-border: #63758d;
+  --key-chosen: #24496f;
+  --key-chosen-text: #ffffff;
+  --tile-bg: #dce5ef;
+  --tile-outline: #63758d;
+  --tile-revealed: #226144;
+  --tile-revealed-text: #ffffff;
+  --overlay-bg: #24496f;
+  --overlay-text: #ffffff;
+  --form-bg: #ffffff;
+  --form-text: #192a40;
+  --action-bg: #ffffff;
+  --action-text: #173859;
+  --focus: #f7c65a;
+  --win-bg: #17613e;
+  --lose-bg: #96313d;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --page-bg: #101926;
+  --surface: #1a293a;
+  --text: #f6f9ff;
+  --muted-text: #d7e1ed;
+  --border: #9bacc4;
+  --brand: #b9d8ff;
+  --brand-text: #101926;
+  --key-bg: #293c52;
+  --key-text: #ffffff;
+  --key-border: #a6b6cc;
+  --key-chosen: #b9d8ff;
+  --key-chosen-text: #101926;
+  --tile-bg: #324760;
+  --tile-outline: #9bacc4;
+  --tile-revealed: #a6e5c6;
+  --tile-revealed-text: #10271d;
+  --overlay-bg: #1a314b;
+  --overlay-text: #ffffff;
+  --form-bg: #ffffff;
+  --form-text: #192a40;
+  --action-bg: #d5e8ff;
+  --action-text: #11263b;
+  --focus: #ffd074;
+  --win-bg: #1c5037;
+  --lose-bg: #773040;
+}
+
+:root[data-theme='neon'] {
+  color-scheme: dark;
+  --page-bg: #0d0a18;
+  --surface: #1c1530;
+  --text: #fff9ff;
+  --muted-text: #e8d5f5;
+  --border: #bda4dc;
+  --brand: #f4b4ff;
+  --brand-text: #180b26;
+  --key-bg: #33254d;
+  --key-text: #ffffff;
+  --key-border: #bda4dc;
+  --key-chosen: #f4b4ff;
+  --key-chosen-text: #180b26;
+  --tile-bg: #302247;
+  --tile-outline: #bda4dc;
+  --tile-revealed: #a9f6d5;
+  --tile-revealed-text: #10271d;
+  --overlay-bg: #41175a;
+  --overlay-text: #ffffff;
+  --form-bg: #ffffff;
+  --form-text: #192a40;
+  --action-bg: #f4b4ff;
+  --action-text: #180b26;
+  --focus: #ffdf62;
+  --win-bg: #195e46;
+  --lose-bg: #882b53;
+}

@@ -1,0 +1,28 @@
+// Hard-mode timer: values are displayed as text and a native progress indicator.
+.timer {
+  display: grid;
+  justify-items: center;
+  gap: .4rem;
+  color: var(--text);
+}
+.timer #timer-countdown {
+  font-size: clamp(1.2rem, 3.2vw, 1.65rem);
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+}
+.timer progress {
+  width: min(100%, 17rem);
+  height: .8rem;
+  overflow: hidden;
+  appearance: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--tile-bg);
+  color: var(--brand);
+  accent-color: var(--brand);
+}
+.timer progress::-webkit-progress-bar { background: var(--tile-bg); border-radius: 999px; }
+.timer progress::-webkit-progress-value { background: var(--brand); border-radius: 999px; }
+.timer progress::-moz-progress-bar { background: var(--brand); border-radius: 999px; }
+.timer__annotation { font-size: .875rem; font-weight: 600; color: var(--muted-text); text-align: center; }
+.timer--urgent #timer-countdown { text-decoration: underline; text-underline-offset: .2em; }
